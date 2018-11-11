@@ -47,7 +47,19 @@ class Resource extends Controller {
 
     }
     async destroy(req, res) {
-        res.send('delete => '+ req.params.id);
+        try {
+            if (this.model) {
+                let order = await this.model.findByIdAndDelete(req.params.id);
+                if (!order) {
+                    throw new Error('Not found to delete!');
+                }
+                res.success(order, 'Deleted successfully!');
+            } else {
+                res.send('delete => ' + req.params.id);
+            }
+        } catch (error) {
+            res.status(404).error(error);
+        }
     }
 }
 

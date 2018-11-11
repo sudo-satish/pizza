@@ -34,9 +34,10 @@ itemSchema.statics.lov = async function () {
 itemSchema.statics.getDetail = async function (where) {
     return this.find(where)
         .populate({ path: 'ingredients', select: '-createdAt -updatedAt'})
-        .populate({ path: 'type', select: '-active -translation_type -order -createdAt -updatedAt -_id -createdAt -updatedAt' })
+        .populate({ path: 'type', select: '-active -translation_type -order -createdAt -updatedAt -createdAt -updatedAt' })
         .select('-createdAt -updatedAt')
         .exec();
 }
 
-module.exports = mongoose.model('Item', itemSchema);
+let ItemModel = mongoose.model('Item', itemSchema);
+module.exports = { ItemModel, ItemSchema: itemSchema } 

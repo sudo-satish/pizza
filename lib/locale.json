@@ -1,0 +1,25 @@
+{
+  "Duplicate value!": {
+    "en": "Duplicate value!",
+    "hi": "Duplicate hai!"
+  },
+  "FIELD_FAIL": {
+    "en": "Field validation failed!",
+    "hi": "Field jaruri hai"
+  },
+  "INVALID_REQUEST": {
+    "en": "Invalid request!",
+    "hi": "Invalid request hai"
+  },
+  "Not found to delete!": {
+    "en": "Not found to delete!",
+    "hi": "Order nhi h"
+  },
+  "Update": {
+    "fr": "Update nathi faeo",
+    "hi": "Update ho to gya"
+  },
+  "Phone not registered!": {
+    "en": "Phone not registered!"
+  }
+}
